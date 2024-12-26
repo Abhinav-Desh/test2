@@ -6,12 +6,11 @@ import CardContent from '@mui/joy/CardContent';
 import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 
-
-export default function BasicCard({name,Dates,Stack,Description}) {
+export default function BasicCard({ name, Dates, Stack, Description,darkmode,setDarkMode}) {
   return (
-    <Card sx={{ width: '30%' }}>
-      <div>
-        <Typography level="title-lg">{name}</Typography>
+    <Card sx={{ width: {xs:'80%',sm:'100%'}, maxWidth: '400px' ,backgroundColor:darkmode===true?'#121212':'white'}}>
+      <div >
+        <Typography level="title-lg" sx={{color:darkmode===true?'white':'black'}}>{name}</Typography>
         <Typography level="body-sm">{Dates}</Typography>
         <IconButton
           aria-label="bookmark Bahamas Islands"
@@ -19,9 +18,7 @@ export default function BasicCard({name,Dates,Stack,Description}) {
           color="neutral"
           size="sm"
           sx={{ position: 'absolute', top: '0.875rem', right: '0.5rem' }}
-        >
-          
-        </IconButton>
+        ></IconButton>
       </div>
       <AspectRatio minHeight="120px" maxHeight="200px">
         <img
@@ -32,28 +29,20 @@ export default function BasicCard({name,Dates,Stack,Description}) {
         />
       </AspectRatio>
       <CardContent orientation="horizontal">
-        <div style={{display:'flex',flexDirection:'column'}}>
-        <div>
-          <Typography level="body-lg">Project Description:</Typography>
-          <Typography sx={{ fontSize: 'lg', fontWeight: 'lg' }}>{Description}</Typography>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div>
+            <Typography level="body-lg" sx={{color:darkmode===true?'white':''}}>Project Description:</Typography>
+            <Typography sx={{ fontSize: 'lg', fontWeight: 'lg',color:darkmode===true?'white':'' }}>{Description}</Typography>
+          </div>
+          <div style={{ marginTop: '30px' }}>
+            <Typography level="body-lg" sx={{color:darkmode===true?'white':''}}>Tech stack:</Typography>
+            <Typography sx={{ fontSize: 'lg', fontWeight: 'lg',color:darkmode===true?'white':'' }}>{Stack}</Typography>
+          </div>
         </div>
-        <div style={{marginTop:'30px'}}>
-          <Typography level="body-lg" >Tech stack:</Typography>
-          <Typography sx={{ fontSize: 'lg', fontWeight: 'lg' }}>{Stack}</Typography>
-        </div> 
-        
-        </div>
-        </CardContent>
-        <Button
-          variant="solid"
-          size="md"
-          color="primary"
-         
-          sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
-        >
-          Explore
-        </Button>
-      
+      </CardContent>
+      <Button variant="solid" size="md" color="primary" sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }} >
+        Explore
+      </Button>
     </Card>
   );
 }

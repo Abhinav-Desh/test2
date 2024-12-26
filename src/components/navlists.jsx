@@ -1,25 +1,29 @@
-const navlists = ()=>{
-
-    return(
-        <div className="navbar"style={{position: 'sticky',
-            top: 0,
-            overflow: 'hidden'}} >
-        <div className="nav-lists" >
-            <div className="right-section">
-                <div className="right-child" style={{borderRadius:3}}>
-                    Navbar
+import { useEffect } from 'react';
+import * as React from 'react';
+import DarkMode from './DarkMode';
+const Navlists = ({darkmode,setDarkMode}) => {
+    //  background-color: #f8fffa;
+    // useEffect(()=>{
+    //     setDarkMode(darkmode);
+    // },[darkmode])
+    return (
+        <div className="navbar" style={{ position: 'sticky', top: 0, left:0, overflow: 'hidden', zIndex: '90', }}>
+            <div className="nav-lists" style={{  backgroundColor: darkmode===true ? '#3f3f3f' : '#f8fffa', color:darkmode===true?'white':'' }}>
+                <div className="right-section">
+                    <div className="right-child" style={{ borderRadius: 3 }}>
+                        Navbar
+                    </div>
+                </div>
+                <div className="left-section">
+                    <li className="list-1 nav-left-child" style={{  width: '20%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>About Me</li>
+                    <li className="list-2 nav-left-child" style={{  width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</li>
+                    <li className="list-3 nav-left-child" style={{  width: '20%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</li>
+                    <li className="list-4 nav-left-child" style={{ width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</li>
+                    <li className="list-4 nav-left-child" style={{ width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}><DarkMode  darkmode={darkmode} setDarkMode={setDarkMode} /></li>
                 </div>
             </div>
-            <div className="left-section">
-            <li className="list-1 nav-left-child" style={{borderRight:'2px grey solid',width:'16%',cursor:"pointer"}}>About Me</li>
-            <li className="list-2 nav-left-child" style={{borderRight:'2px grey solid',width:'16%',cursor:"pointer"}}>Projects</li>
-            <li className="list-3 nav-left-child"style={{borderRight:'2px grey solid',width:'25%',cursor:"pointer"}}>Contact Form</li>
-            <li className="list-4 nav-left-child"style={{width:'25%',cursor:"pointer"}}>skills</li>
-            </div>
-        </div>
-
         </div>
     );
-}
+};
 
-export default navlists;
+export default Navlists;

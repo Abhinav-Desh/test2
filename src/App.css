@@ -6,7 +6,7 @@ body{
   background-color: rgb(232, 232, 245);
 }
 .AboutMe{
-  background-color: rgb(251, 252, 253);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
   width: 50%;
   height: 50%;
   border-radius: 10px;
@@ -30,38 +30,150 @@ img{
   font-size: 24px;
 }
 
-.nav-lists{
-  display: flex;
-  list-style-type: none;
-  width: 90%;
-  height: 50px;
-  align-items: center;
-  justify-content:space-between;
-  background-color: #f8fffa;
-  margin: 20px auto ;
- 
+
+.navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 90;
+  
 }
 
-.left-section{
+.nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 90%;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.left-section {
   display: flex;
   justify-content: space-around;
   width: 50%;
   font-size: 20px;
   font-weight: 500;
+  align-items: center;
+  
 }
 
-.right-section{
+.nav-left-child {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.right-section {
   background-color: rgb(3, 147, 249);
   width: 100px;
+  height: 50px;
   text-align: center;
-   height: 50px;
-
 }
 
-.right-child{
-padding-top: 15px;
-color: aliceblue;
-font-size: 20px;
-font-weight: 500;
+.right-child {
+  padding-top: 15px;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 500;
 }
 
+
+@media (max-width: 768px) {
+  .nav-lists {
+      flex-direction: column;  
+      align-items: flex-start; 
+      height: 40px; 
+  }
+
+  .left-section {
+      width: 100%; 
+      justify-content: space-evenly; 
+      font-size: 18px;
+      margin-bottom: 10px; 
+  }
+
+  .nav-left-child {
+      width: 100%;  
+      text-align: center; 
+      padding: 10px 0;
+      border-right: none;  
+      font-size: 16px;
+  }
+
+  .right-section {
+    display: none;
+      
+  }
+
+  .right-child {
+      font-size: 18px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-lists {
+      padding: 10px 15px;
+  }
+
+  .nav-left-child {
+      font-size: 14px;
+      padding: 12px 0; 
+  }
+
+  .right-child {
+      font-size: 16px;
+      padding: 8px;
+  }
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MuiCard-root {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiCard-root {
+    width: 100%; 
+  }
+  .nav-left-child {
+    font-size: 14px;
+    padding-top: 1px; 
+}
+}
+
+.DarkToggle {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.DarkToggle:hover {
+  background-color: #45a049; 
+  transform: scale(1.05);
+}
+
+.DarkToggle:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}

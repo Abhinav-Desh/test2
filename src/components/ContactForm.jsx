@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Input, Typography } from "@mui/joy";
 
-const ContactForm = () => {
+const ContactForm = ({darkmode,setDarkMode}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -37,8 +37,8 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form">
-      <div style={{ textAlign: "center", fontSize: "50px" }}>Contact Form</div>
-      <div style={{ width: "30%", backgroundColor: "rgb(251, 252, 253)",margin:'10px auto' }}>
+      <div style={{ textAlign: "center", fontSize: "50px",color:darkmode===true?'white':''  }}>CONTACT FORM</div>
+      <div style={{ width: "30%", backgroundColor: "rgb(251, 252, 253)",margin:'10px auto', minWidth:'350px', borderRadius:'10px' }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Input
             size="md"
@@ -76,7 +76,7 @@ const ContactForm = () => {
               borderRadius: "5px",
               padding: "10px 20px",
               "&:hover": { backgroundColor: "#45a049" },
-              width: "80%",
+              width: "20%",
             }}
           >
             Submit
@@ -114,3 +114,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
