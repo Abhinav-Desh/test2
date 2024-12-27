@@ -1,5 +1,6 @@
 
 import './App.css';
+import Home from './components/Home';
 import AboutMe from "./components/AboutMe"
 import Navbar from "./components/Navlists"
 import Projects from './components/Projects';
@@ -20,6 +21,9 @@ function App() {
     {/* Routes cnn be handle to this routing */}
     {/* Routes enables conditional rendering so that it matches the path  */}
       <Routes>
+      <Route path="/" element={<Home />} />
+
+
       <Route path="/aboutMe" element={<AboutMe darkmode={darkMode} setDarkMode={setDarkMode}/>}/>
       <Route path="/projects" element={<Projects darkmode={darkMode} setDarkMode={setDarkMode} />}/>
       <Route path="/contactForm" element={<ContactForm darkmode={darkMode} setDarkMode={setDarkMode} />}/>

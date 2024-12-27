@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import * as React from 'react';
 import DarkMode from './DarkMode';
 import { NavLink } from 'react-router-dom';
+import Home from "./Home";
 const Navlists = ({darkmode,setDarkMode}) => {
     //  background-color: #f8fffa;
     // useEffect(()=>{
@@ -16,11 +17,12 @@ const Navlists = ({darkmode,setDarkMode}) => {
                     </div>
                 </div>
                 <div className="left-section">
-                    <NavLink to="/aboutMe" className="list-1 nav-left-child" style={{  width: '20%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>About Me</NavLink>
-                    <NavLink to="/projects" className="list-2 nav-left-child" style={{  width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</NavLink>
-                    <NavLink to="/contactForm" className="list-3 nav-left-child" style={{  width: '20%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</NavLink>
-                    <NavLink to="/skills" className="list-4 nav-left-child" style={{ width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</NavLink>
-                    <li className="list-4 nav-left-child" style={{ width: '20%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}><DarkMode  darkmode={darkmode} setDarkMode={setDarkMode} /></li>
+                <NavLink to="/" className="list-1 nav-left-child" style={{  width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>Home</NavLink>
+                    <NavLink to="/aboutMe" className="list-1 nav-left-child" style={{  width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>About Me</NavLink>
+                    <NavLink to="/projects" className="list-2 nav-left-child" style={{  width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</NavLink>
+                    <NavLink to="/contactForm" className="list-3 nav-left-child" style={{  width: '18%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</NavLink>
+                    <NavLink to="/skills" className="list-4 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</NavLink>
+                    <li className="list-6 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}><DarkMode  darkmode={darkmode} setDarkMode={setDarkMode} /></li>
                 </div>
             </div>
         </div>
