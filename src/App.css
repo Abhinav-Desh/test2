@@ -49,7 +49,36 @@ img{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
+.nav-left-child {
+  cursor: pointer;
+  text-decoration: none; 
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px; 
+  text-align: center;
+  display: block; 
+  width: 100%; 
+}
 
+.nav-left-child:hover {
+  background-color: #03a9f4;
+  color: white; 
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-left-child:active {
+  background-color: #0288d1;
+  transform: scale(1); 
+}
+
+.nav-left-child:focus {
+  outline: none; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
 .left-section {
   display: flex;
   justify-content: space-around;
