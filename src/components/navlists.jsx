@@ -22,6 +22,7 @@ const Navlists = ({darkmode,setDarkMode}) => {
                     <NavLink to="/projects" className="list-2 nav-left-child" style={{  width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</NavLink>
                     <NavLink to="/contactForm" className="list-3 nav-left-child" style={{  width: '18%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</NavLink>
                     <NavLink to="/skills" className="list-4 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</NavLink>
+                    <NavLink to = "/table" className="list-5 nav-left-child" style={{width:"18%",textAlign:'center',cursor:'pointer', listStyle:'none'}}>Show Tables</NavLink>
                     <li className="list-6 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}><DarkMode  darkmode={darkmode} setDarkMode={setDarkMode} /></li>
                 </div>
             </div>

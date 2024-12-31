@@ -6,6 +6,7 @@ import Navbar from "./components/Navlists"
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
 import Skills from './components/skills';
+import Table from './components/Table';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch,Routes } from 'react-router-dom'; 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path="/projects" element={<Projects darkmode={darkMode} setDarkMode={setDarkMode} />}/>
       <Route path="/contactForm" element={<ContactForm darkmode={darkMode} setDarkMode={setDarkMode} />}/>
       <Route path="/skills" element={<Skills darkmode={darkMode} setDarkMode={setDarkMode}  />}/>
+      <Route path="/table" element = {<Table darkmode={darkMode} setDarkMode = {setDarkMode}/>}/>
       </Routes>
     </div>
     

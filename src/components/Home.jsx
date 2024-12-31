@@ -12,6 +12,7 @@ return(
         <Projects/>
         <ContactForm />
         <Skills />
+       
     </div>
 );
 }
