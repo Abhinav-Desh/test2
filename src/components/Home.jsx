@@ -4,14 +4,15 @@ import  Projects from "./Projects";
 import ContactForm from "./ContactForm";
 import Skills from "./skills";
 
-const Home = ()=>{
+const Home = ({darkmode,setDarkMode})=>{
 return(
     <div>
         
-        <AboutMe />
-        <Projects/>
-        <ContactForm />
-        <Skills />
+        <AboutMe  darkmode={darkmode} setDarkMode={setDarkMode} />
+        <Projects  darkmode={darkmode} setDarkMode={setDarkMode}/>
+       
+        <Skills  darkmode={darkmode} setDarkMode={setDarkMode} />
+        <ContactForm  darkmode={darkmode} setDarkMode={setDarkMode} />
        
     </div>
 );

@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body{
   background-color: rgb(247, 247, 247);
@@ -44,8 +45,9 @@ img{
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  width: 90%;
-  height: 50px;
+  width: 100%;
+  height: 20%;
+  min-height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
@@ -59,7 +61,7 @@ img{
   transition: all 0.3s ease-in-out;
   border-radius: 5px; 
   text-align: center;
-  display: block; 
+  
   width: 100%; 
 }
 
@@ -73,11 +75,13 @@ img{
 .nav-left-child:active {
   background-color: #0288d1;
   transform: scale(1); 
+  
 }
 
 .nav-left-child:focus {
   outline: none; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ 
 }
 .left-section {
   display: flex;
@@ -114,7 +118,7 @@ img{
   .nav-lists {
       flex-direction: column;  
       align-items: flex-start; 
-      height: 40px; 
+      
   }
 
   .left-section {
@@ -143,21 +147,6 @@ img{
   }
 }
 
-@media (max-width: 480px) {
-  .nav-lists {
-      padding: 10px 15px;
-  }
-
-  .nav-left-child {
-      font-size: 14px;
-      padding: 12px 0; 
-  }
-
-  .right-child {
-      font-size: 16px;
-      padding: 8px;
-  }
-}
 
 .projects-container {
   display: flex;

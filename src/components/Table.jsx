@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Table = () => {
+const Table = ({darkmode,setDarkMode}) => {
     const [users, setUsers] = useState([]);  
     const [loading, setLoading] = useState(true);  
     const [error, setError] = useState(null);
@@ -20,14 +20,15 @@ const Table = () => {
     }, []);
 
     return (
-        <div style={{ color: 'black', textAlign: 'center', fontSize: '25px' }}>
+        <div style={{ color: darkmode ? 'white' : 'black', textAlign: 'center', fontSize: '30px', marginTop:'5px' }}>
             Show Status
 
             <div className="show-table" style={{
                 width: '90%',
-                margin: '50px auto',
+                margin: '20px auto',
                 overflow:'none',
                 overflowY: 'auto',
+                
                 border: '1px solid #ddd', 
                 borderRadius: '8px',
                 height:'550px',
@@ -37,7 +38,7 @@ const Table = () => {
                 {loading && <p>Loading...</p>}
                 {error && <p style={{ color: 'red' }}>Error: {error}</p>}
 
-                {/* Table for displaying user data */}
+                
                 {!loading && !error && (
                     <table style={{
                         width: '100%',
@@ -73,6 +74,7 @@ const Table = () => {
                                 <tr key={user.id} style={{
                                     backgroundColor: user.id % 2 === 0 ? '#f9f9f9' : 'white',
                                     transition: 'background-color 0.3s ease',
+                                    color:'black'
                                 }}>
                                     <td style={{  textAlign: 'center' }}>{user.firstName}</td>
                                     <td style={{ textAlign: 'center' }}>{user.lastName}</td>

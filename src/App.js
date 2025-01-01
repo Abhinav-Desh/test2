@@ -22,7 +22,7 @@ function App() {
     {/* Routes cnn be handle to this routing */}
     {/* Routes enables conditional rendering so that it matches the path  */}
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home darkmode = {darkMode} setDarkMode = {setDarkMode}/>} />
 
 
       <Route path="/aboutMe" element={<AboutMe darkmode={darkMode} setDarkMode={setDarkMode}/>}/>

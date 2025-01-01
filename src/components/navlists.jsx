@@ -16,13 +16,13 @@ const Navlists = ({darkmode,setDarkMode}) => {
                         Navbar
                     </div>
                 </div>
-                <div className="left-section">
-                <NavLink to="/" className="list-1 nav-left-child" style={{  width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>Home</NavLink>
-                    <NavLink to="/aboutMe" className="list-1 nav-left-child" style={{  width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>About Me</NavLink>
-                    <NavLink to="/projects" className="list-2 nav-left-child" style={{  width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</NavLink>
-                    <NavLink to="/contactForm" className="list-3 nav-left-child" style={{  width: '18%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</NavLink>
-                    <NavLink to="/skills" className="list-4 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</NavLink>
-                    <NavLink to = "/table" className="list-5 nav-left-child" style={{width:"18%",textAlign:'center',cursor:'pointer', listStyle:'none'}}>Show Tables</NavLink>
+                <div className="left-section" style={{width:'76%'}}>
+                <NavLink to="/" className="list-1 nav-left-child" style={{ color:darkmode?'white':'black', width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>Home</NavLink>
+                    <NavLink to="/aboutMe" className="list-1 nav-left-child" style={{ color:darkmode?'white':'black', width: '17%',textAlign:'center',cursor: 'pointer',listStyle:'none' }}>About Me</NavLink>
+                    <NavLink to="/projects" className="list-2 nav-left-child" style={{color:darkmode?'white':'black',  width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Projects</NavLink>
+                    <NavLink to="/contactForm" className="list-3 nav-left-child" style={{color:darkmode?'white':'black',  width: '18%',textAlign:'center', cursor: 'pointer',listStyle:'none' }}>Contact Form</NavLink>
+                    <NavLink to="/skills" className="list-4 nav-left-child" style={{color:darkmode?'white':'black', width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}>Skills</NavLink>
+                    <NavLink to = "/table" className="list-5 nav-left-child" style={{color:darkmode?'white':'black',width:"18%",textAlign:'center',cursor:'pointer', listStyle:'none'}}>Show Tables</NavLink>
                     <li className="list-6 nav-left-child" style={{ width: '17%',textAlign:'center',  cursor: 'pointer',listStyle:'none' }}><DarkMode  darkmode={darkmode} setDarkMode={setDarkMode} /></li>
                 </div>
             </div>
